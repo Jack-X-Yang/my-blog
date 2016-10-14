@@ -71,3 +71,4 @@ deploy:
   type: git
   repository: https://github.com/Jack-X-Yang/Jack-X-Yang.github.io.git
   branch: master
+  
