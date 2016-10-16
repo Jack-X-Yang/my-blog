@@ -72,5 +72,3 @@ deploy:
   repo:
     github: https://github.com/Jack-X-Yang/Jack-X-Yang.github.io.git,master
     gitcafe: https://git.coding.net/Jack-X-Yang/Jack-X-Yang.git,coding-pages
-
-  
