@@ -20,12 +20,13 @@ date: 2016-10-15 16:42:00
 <!-- toc -->
 
 - [前言](#前言)
+- [目录](#目录)
 - [安装node](#安装node)
 - [安装git](#安装git)
 - [安装hexo](#安装hexo)
 - [初始化博客](#初始化博客)
 - [撰写博客](#撰写博客)
-- [生成静态文件](#生成静态文件)
+- [生成静态页面](#生成静态页面)
 - [发布到github和gitcafe上](#发布到github和gitcafe上)
 - [后记](#后记)
 
@@ -71,12 +72,26 @@ $ hexo serve
 
 ### 撰写博客
 ---
-- 参考hexo官网的文档 https://hexo.io/docs/writing.html
+- 使用hexo命令撰写文章  
+  准确的说应该是创建文章  
+  hexo默认有三种布局（layout），分别是：post、page和draft
+  - post就是普通的文章，存储在`source/_posts`文件夹里
+  - page依照个人理解应该是页面，比如分类页面，about页面之类的  
+  - draft就是草稿，草稿默认不显示，可以使用`publish`命令将草稿从`source/_drafts`移到`source/_posts`
+
+  创建文章：
+  ```shell
+  $hexo publish [layout] <title>
+  ```
+
+  markdown文本编辑器强烈推荐atom下的[markdown-preview-enhanced](https://atom.io/packages/markdown-preview-enhanced)插件，功能超级强大
+
+  参考hexo官网的文档 https://hexo.io/docs/writing.html
 - 使用hexo-admin插件
 切换到博客的目录，运行：
-```shell
-$ npm install hexo-admin --save
-```
+  ```shell
+  $ npm install hexo-admin --save
+  ```
   安装完毕后，运行：
   ```shell
   $ hexo serve
@@ -84,11 +99,18 @@ $ npm install hexo-admin --save
   打开http://localhost:4000/admin即可在网页中编辑自己的博客
   更加详细用法参照：https://github.com/jaredly/hexo-admin
 
-### 生成静态文件
+### 生成静态页面
 ---
 ```shell
 $ hexo generate
 ```
+注意： 每次修改文章之后都要运行该命令，重新生成静态页面
+
+如果嫌麻烦，可以使用下列命令来监视文件修改自动生成
+```shell
+$ hexo generate --watch
+```
+
 详情： https://hexo.io/zh-cn/docs/generating.html
 
 ### 发布到github和gitcafe上
@@ -111,14 +133,14 @@ $ npm install hexo-deployer-git --save
 - 修改`_config.yml`配置文件
 ```shell
 deploy:
-  	type: git
-  	message: [message]
-  	repo:
-    	github: <repository url>,[branch]
-    	gitcafe: <repository url>,[branch]
-  	extend_dirs:
-    	- [extend directory]
-    	- [another extend directory]
+  type: git
+  message: [message]
+  repo:
+    github: <repository url>,[branch]
+    gitcafe: <repository url>,[branch]
+  extend_dirs:
+    - [extend directory]
+    - [another extend directory]
 ```
   详情参考： https://github.com/hexojs/hexo-deployer-git
 - 部署命令
