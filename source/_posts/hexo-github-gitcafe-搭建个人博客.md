@@ -125,7 +125,7 @@ $ hexo generate --watch
 	- gitcafe：https://coding.net/help/doc/pages/index.html
 - 测试github和gitcafe服务是否可用，可能会询问安全问题输入yes
 	- github：ssh -T git@github.com
-    - gitcafe：ssh -T git@coding.net
+    - gitcafe：ssh -T git@git.coding.net
 - 安装发布插件
 ```shell
 $ npm install hexo-deployer-git --save
