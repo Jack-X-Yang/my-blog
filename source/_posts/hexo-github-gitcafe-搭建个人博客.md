@@ -6,8 +6,7 @@ categories:
   - hexo
 date: 2016-10-15 16:42:00
 ---
-### 前言
----
+# 前言
 最近发现学习效率比较低，决定搭个个人博客，一方面当作学习笔记，另一方面也对自己起一个监督的作用。
 
 之前用过`jekyll`利用github的pages搭过个人博客，也用过`webpress`和`博客园`，但是都没弄到一半放弃了。`jekyll`是因为自己嫌配置麻烦，`webpress`和`博客园`是觉得主题太丑，并且自己个性化比较麻烦。由于本人是前端狗，所以看到`hexo`不错，决定折腾一下。
@@ -15,8 +14,7 @@ date: 2016-10-15 16:42:00
 步骤比较笼统，但是都给了相应资料的链接。
 <!-- more -->
 
-### 目录
----
+# 目录
 <!-- toc -->
 
 - [前言](#前言)
@@ -31,25 +29,23 @@ date: 2016-10-15 16:42:00
 - [后记](#后记)
 
 <!-- tocstop -->
-### 安装node
----
+
+# 安装node
 - windows 用户直接[node官网](https://nodejs.org/en/)下载，安装
 - linux 用户推荐使用[nvm](https://github.com/creationix/nvm)安装
 
-### 安装git
+# 安装git
 ---
 git下载地址 https://git-scm.com/downloads
 
 注意： windows用户git安装时一定要安装bash
 
-### 安装hexo
----
+# 安装hexo
 ```shell
 $ npm install hexo -g
 ```
 
-### 初始化博客
----
+# 初始化博客
 - 新建文件夹作为博客的目录
 - 切换到新建的目录，然后运行
 ```shell
@@ -60,9 +56,9 @@ $ hexo init
 $ npm i
 ```
   或者
-	```shell
-	$ npm install
-	```
+```shell
+$ npm install
+```
 - 启动服务器
 ```shell
 $ hexo serve
@@ -70,8 +66,7 @@ $ hexo serve
 命令行会提示本地服务器访问的链接是http://localhost:4000/
 打开链接就可以访问你的博客了
 
-### 撰写博客
----
+# 撰写博客
 - 使用hexo命令撰写文章  
   准确的说应该是创建文章  
   hexo默认有三种布局（layout），分别是：post、page和draft
@@ -80,27 +75,26 @@ $ hexo serve
   - draft就是草稿，草稿默认不显示，可以使用`publish`命令将草稿从`source/_drafts`移到`source/_posts`
 
   创建文章：
-  ```shell
-  $hexo publish [layout] <title>
-  ```
+```shell
+$hexo publish [layout] <title>
+```
 
   markdown文本编辑器强烈推荐atom下的[markdown-preview-enhanced](https://atom.io/packages/markdown-preview-enhanced)插件，功能超级强大
 
   参考hexo官网的文档 https://hexo.io/docs/writing.html
 - 使用hexo-admin插件
 切换到博客的目录，运行：
-  ```shell
-  $ npm install hexo-admin --save
-  ```
+```shell
+$ npm install hexo-admin --save
+```
   安装完毕后，运行：
-  ```shell
-  $ hexo serve
-  ```
+```shell
+$ hexo serve
+```
   打开http://localhost:4000/admin即可在网页中编辑自己的博客
   更加详细用法参照：https://github.com/jaredly/hexo-admin
 
-### 生成静态页面
----
+# 生成静态页面
 ```shell
 $ hexo generate
 ```
@@ -113,8 +107,7 @@ $ hexo generate --watch
 
 详情： https://hexo.io/zh-cn/docs/generating.html
 
-### 发布到github和gitcafe上
----
+# 发布到github和gitcafe上
 - 首先申请账号
 - 生成公钥
 参考：https://git-scm.com/book/zh/ch4-3.html
@@ -149,17 +142,16 @@ $ hexo generate
 $ hexo deploy
 ```
   或者：
-  ```shell
-  $ hexo g -d
-  ```
+```shell
+$ hexo g -d
+```
   注意： 可能会提示登录
 
-### 后记
----
+# 后记
 如果之后需要发布只需运行：
 ```shell
 $ hexo g -d
 ```
 即可
 
-由于本人还是个初学者，水平有限，如果本文中有错误，希望大家不吝赐教
+由于本人还是个初学者，水平有限，如果本文中有错误，希望大家能够指出来
