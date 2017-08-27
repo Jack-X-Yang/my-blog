@@ -69,6 +69,8 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
+  name: Jack-X-Yang
+  email: 1487019521@qq.com
   repo:
     github: https://github.com/Jack-X-Yang/Jack-X-Yang.github.io.git,master
-    gitcafe: https://git.coding.net/Jack-X-Yang/Jack-X-Yang.git,coding-pages
+    coding: https://git.coding.net/Jack-X-Yang/Jack-X-Yang.git,master
