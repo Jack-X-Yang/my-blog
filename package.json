@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "server": "hexo server",
-    "deploy": "hexo d -g"
+    "server": "hexo server --config source/_data/next.yml",
+    "deploy": "hexo d -g --config source/_data/next.yml"
   },
   "hexo": {
     "version": "3.3.8"

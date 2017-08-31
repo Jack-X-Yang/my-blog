@@ -433,6 +433,16 @@ valine:
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 #livere_uid: your uid
 
+# Gitment
+# Introduction: https://imsun.net/posts/gitment-introduction/
+gitment:
+  enable: true
+  githubID: Jack-X-Yang
+  repo: Jack-X-Yang.github.io
+  ClientID: ebd03a00917593f435b6
+  ClientSecret: f7b051ed0550ea90e63fe8348e6eaaaca8b05ac7
+  lazy: false
+
 # Baidu Share
 # Available value:
 #    button | slide
